@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+       <ul class="sidebar">
+            <li onclick=hideSideBar()><a href="#"><img src="close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" height="26" width="26" id="icon"></a></li>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> Experience</a></li>
+            <li><a href="#"> Education</a></li>
+            <li><a href="#"> Skills</a></li>
+            <li><a href="#"> Contacts</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="#"> <b>BRION ALFORNON</b></a></li>
+            <li class="hideOnMobile"><a href="#"> Experience</a></li>
+            <li class="hideOnMobile"><a href="#"> Education</a></li>
+            <li class="hideOnMobile"><a href="#"> Skills</a></li>
+            <li class="hideOnMobile"><a href="#"> Contacts</a></li>
+            <li class = "menuButton" onclick=showSideBar()><a><img src="menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="menu-logo" height="26" width="26p" id="icon"></a></li>
+        </ul>
+    </nav>
+
+    <nav class="home">
+        
+        <img src="id-round.png" id="face">
+
+        <div class="hello-page">
+            <h1>Hello, <span class="line-break"></span>I'm Brion</h1>
+            <h3>I'm a <span class="blink"></span></h3>
+            <div class="home-paragraph">
+                <p>I'm From Cebu, currently studying Bachelor of Science in Computer Engineering, 
+                    specializing in programming and software development. I'm Proficient at HTML, CSS, C, C++, 
+                    and Python!</p>
+        </div>
+
+        <div class="socials">
+            <a href="https://www.facebook.com/LucasAlfornon"> <i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/brionalfornon"> <i class="fab fa-github"></i></a>
+        </div>
+        
+
+    </nav>
+
+    <script>
+        function showSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        };
+
+        function hideSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar{
+    background-color: white;
+    box-shadow:  3px 3px 5px rgba(0,0,0,0.1);
+}
+
+.navbar ul{
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar li{
+    height: 50px;
+}
+
+.navbar a {
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    background-color: lightgrey;
+    transition: 0.5s ease;
+}
+
+.navbar li:first-child{
+    margin-right:auto;
+}
+
+.navbar .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.navbar .sidebar li{
+    width: 100%;
+}
+
+.navbar .sidebar a{
+    width: 100%;
+}
+
+#icon{
+    filter: brightness(0%) saturate(100%);
+}
+
+.menuButton{
+    display:none;
+}
+
+img{
+    display:block;
+    max-inline-size: 100%;
+}
+
+.home{
+    display: flex;
+    background:linear-gradient(45deg, #000000, #273245, #282940);
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100vh;
+    width: 100%;
+    z-index: 1px;
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 50% 100%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+#face{
+    margin-top: -8rem;
+    background-color: transparent;
+    width: 340px;
+    height: auto;
+    max-width: 80vw;
+
+}
+
+.home .hello-page{
+    margin-top: -8rem;
+    margin-left: 3vw;
+    color: white;
+}
+
+.home-paragraph{
+    display: block;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 700px;
+    background-color: transparent;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+}
+
+.home h1{
+    font-size: 3.5rem;
+}
+
+.home h3{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.home p{
+    font-size: 1rem;
+}   
+
+.hello-page span{
+    color: rgb(93, 64, 224)
+}
+
+.line-break{
+    display: inline;
+}
+
+.hello-page .blink{
+    position: relative;
+}
+
+.hello-page .blink::before{
+      content: "";
+  animation: typing 13.5s infinite;
+}
+
+.hello-page .blink::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid rgb(93, 64, 224);
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink{
+    0%, 50%{
+        opacity: 1;
+    }
+
+    50.01%, 100%{
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+  /* a Developer */
+  0%, 25%   { content: "Web Developer"; }
+
+  26%, 50%  { content: "Computer Engineer"; }
+
+  51%, 75%  { content: "Programmer"; }
+
+  76%, 100% { content: "Student";}
+
+}
+
+.socials{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;            /* <--- This centers the whole block */
+    flex-wrap: wrap;              /* allows icons to wrap if needed */
+    gap: 15px;
+    margin-left: 0;
+
+}
+
+.socials i {
+    font-size: 32px;
+    margin-right: 15px; /* adds space between icons */
+    color: white; /* optional: change icon color */
+    transition: transform 0.2s ease;
+}
+
+.socials i:hover{
+    transform: scale(1.3);
+    color:rgb(93, 64, 224);
+}
+
+
+
+
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menuButton{
+        display: block;
+    }
+
+    #face{
+        margin-top: 0rem;
+        width: 250px;
+        transition: 0.3s ease;
+    }
+
+    .home{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home h1, h3{
+        text-align: center;
+    }
+
+    .home p{
+        text-align: justify;
+    }
+
+    .home .hello-page{
+        margin-top: 0rem;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .line-break{
+        display: block;
+        margin-top: -10px;
+    }
+
+    .home-paragraph{
+    width: 90vw;
+    max-width: 450px;
+ 
+    }
+
+    .socials{
+        align-content: center;
+        justify-content: center;
+        margin-left: 25px;
+ 
+    }
+
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
